@@ -1,13 +1,19 @@
 // src/components/shared/Navigation.jsx
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
+
+  // Close dropdown when location changes
+  React.useEffect(() => {
+    setDropdownOpen(false);
+  }, [location]);
 
   return (
     <div className="bg-white shadow-md">
@@ -25,6 +31,7 @@ const Navigation = () => {
                 className={({ isActive }) => 
                   `text-lg font-semibold ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`
                 }
+                end
               >
                 Home
               </NavLink>
@@ -33,6 +40,7 @@ const Navigation = () => {
                 className={({ isActive }) => 
                   `text-lg font-semibold ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`
                 }
+                end
               >
                 RaaS
               </NavLink>
