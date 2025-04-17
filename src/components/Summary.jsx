@@ -33,6 +33,53 @@ const Summary = ({ config, environment }) => {
         </div>
       </div>
       
+      {environment === 'Mainnet' && (
+        <div className="mb-6 p-4 bg-gray-50 rounded-md">
+          <h3 className="text-lg font-semibold mb-3">Costs and pricing</h3>
+          
+          <div className="flex justify-between items-center mb-2">
+            <div className="flex items-center">
+              <span className="text-sm">Deployment cost</span>
+              <span className="ml-1 text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+            <span className="text-sm">≈ 0.2430 ETH</span>
+          </div>
+          
+          <div className="flex justify-between items-center mb-2">
+            <div className="flex items-center">
+              <span className="text-sm">Monthly recurring DA cost</span>
+              <span className="ml-1 text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+            <span className="text-sm">≈ 0.1561 ETH</span>
+          </div>
+          
+          <div className="flex justify-between items-center mb-2">
+            <div className="flex items-center">
+              <span className="text-sm">Sequencer profit share</span>
+              <span className="ml-1 text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+            </div>
+            <span className="text-sm">5%</span>
+          </div>
+          
+          <div className="flex justify-between items-center">
+            <span className="text-sm">Plan cost</span>
+            <span className="text-sm text-green-600">$3,000 / month</span>
+          </div>
+        </div>
+      )}
+      
       <div className="summary-item">
         <button className="flex items-center justify-between w-full text-left">
           <div className="flex items-center">
