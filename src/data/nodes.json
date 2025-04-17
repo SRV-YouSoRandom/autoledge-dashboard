@@ -1,0 +1,35 @@
+[
+    {
+      "id": "beam",
+      "name": "Beam",
+      "network": "Mainnet",
+      "type": "GAMING",
+      "status": "new",
+      "icon": "🌈"
+    },
+    {
+      "id": "din",
+      "name": "DIN",
+      "network": "Mainnet",
+      "type": "AI",
+      "status": "new",
+      "premium": true,
+      "icon": "⌛"
+    },
+    {
+      "id": "fuse",
+      "name": "Fuse Network",
+      "network": "Testnet",
+      "type": "DEV",
+      "status": "new",
+      "icon": "🔌"
+    },
+    {
+      "id": "xai",
+      "name": "XAI Premium",
+      "network": "Mainnet",
+      "type": "GAMING",
+      "premium": true,
+      "icon": "🔺"
+    }
+  ]

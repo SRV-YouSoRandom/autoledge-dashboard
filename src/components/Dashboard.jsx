@@ -1,6 +1,5 @@
 // src/components/Dashboard.jsx
 import React, { useState } from 'react';
-import Header from './Header';
 import DeployForm from './DeployForm';
 import ConfigStack from './ConfigStack';
 import EnvironmentSelector from './EnvironmentSelector';
@@ -27,7 +26,6 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-blue-tint">
-      <Header />
       
       <div className="flex-1 flex flex-col md:flex-row">
         <div className="flex-1 p-4">
