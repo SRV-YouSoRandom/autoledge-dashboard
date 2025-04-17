@@ -1,24 +1,23 @@
 [
     {
-      "id": "beam",
-      "name": "Beam",
+      "id": "Aether",
+      "name": "Aether",
       "network": "Mainnet",
       "type": "GAMING",
       "status": "new",
-      "icon": "🌈"
+      "icon": ""
     },
     {
-      "id": "din",
-      "name": "DIN",
+      "id": "Juneo",
+      "name": "Juneo Supernet",
       "network": "Mainnet",
-      "type": "AI",
+      "type": "L1",
       "status": "new",
-      "premium": true,
       "icon": "⌛"
     },
     {
-      "id": "fuse",
-      "name": "Fuse Network",
+      "id": "Celestia Light Node",
+      "name": "Celestia Network",
       "network": "Testnet",
       "type": "DEV",
       "status": "new",
@@ -26,7 +25,7 @@
     },
     {
       "id": "xai",
-      "name": "XAI Premium",
+      "name": "XAI",
       "network": "Mainnet",
       "type": "GAMING",
       "premium": true,

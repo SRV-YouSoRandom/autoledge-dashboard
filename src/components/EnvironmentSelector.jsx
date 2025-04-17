@@ -6,6 +6,11 @@ const EnvironmentSelector = ({ onEnvironmentChange }) => {
 
   useEffect(() => {
     onEnvironmentChange(selectedEnvironment);
+    
+    // Return a cleanup function
+    return () => {
+      // Cleanup logic if needed
+    };
   }, [selectedEnvironment, onEnvironmentChange]);
 
   return (

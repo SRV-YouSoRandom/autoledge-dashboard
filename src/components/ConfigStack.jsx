@@ -15,6 +15,11 @@ const ConfigStack = ({ onConfigChange }) => {
       dataAvailability: selectedDA,
       nativeToken: selectedToken
     });
+    
+    // Return a cleanup function
+    return () => {
+      // Cleanup logic if needed
+    };
   }, [selectedFramework, selectedSettlement, selectedDA, selectedToken, onConfigChange]);
 
   return (

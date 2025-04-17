@@ -15,8 +15,8 @@ function App() {
         <div className="flex-1">
           <Routes>
             <Route path="/home" element={<HomePage />} />
-            <Route path="/raas" element={<RaaSPage />} />
-            <Route path="/naas/*" element={<NaaSPage />} />
+            <Route path="/raas" element={<RaaSPage key="raas-page" />} />
+            <Route path="/naas/*" element={<NaaSPage key="naas-page" />} />
             <Route path="/" element={<Navigate to="/home" replace />} />
             <Route path="*" element={<Navigate to="/home" replace />} />
           </Routes>

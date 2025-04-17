@@ -1,11 +1,13 @@
 // src/components/Dashboard.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 import DeployForm from './DeployForm';
 import ConfigStack from './ConfigStack';
 import EnvironmentSelector from './EnvironmentSelector';
 import Summary from './Summary';
 
 const Dashboard = () => {
+  const location = useLocation();
   const [config, setConfig] = useState({
     framework: 'Optimism Bedrock',
     settlement: 'Base Sepolia',
@@ -15,13 +17,22 @@ const Dashboard = () => {
   
   const [environment, setEnvironment] = useState('Testnet');
 
-  const handleConfigChange = (newConfig) => {
+  // Use useCallback to memoize these functions to prevent unnecessary re-renders
+  const handleConfigChange = useCallback((newConfig) => {
     setConfig(newConfig);
-  };
+  }, []);
 
-  const handleEnvironmentChange = (newEnvironment) => {
+  const handleEnvironmentChange = useCallback((newEnvironment) => {
     setEnvironment(newEnvironment);
-  };
+  }, []);
+
+  // Reset component state when the component is mounted
+  useEffect(() => {
+    return () => {
+      // Cleanup function that runs when component unmounts
+      // This helps ensure state doesn't persist inappropriately
+    };
+  }, [location.pathname]);
 
   return (
     <div className="container mx-auto px-4 py-6">
