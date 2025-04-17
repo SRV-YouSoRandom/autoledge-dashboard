@@ -1,17 +1,13 @@
 // src/components/shared/Navigation.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
 
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
   // Close dropdown when location changes
-  React.useEffect(() => {
+  useEffect(() => {
     setDropdownOpen(false);
   }, [location]);
 
@@ -31,7 +27,6 @@ const Navigation = () => {
                 className={({ isActive }) => 
                   `text-lg font-semibold ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`
                 }
-                end
               >
                 Home
               </NavLink>
@@ -40,7 +35,6 @@ const Navigation = () => {
                 className={({ isActive }) => 
                   `text-lg font-semibold ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`
                 }
-                end
               >
                 RaaS
               </NavLink>
@@ -58,7 +52,7 @@ const Navigation = () => {
           <div className="flex items-center relative flex-1 justify-end">
             <button 
               className="px-4 py-2 bg-white border border-gray-300 rounded shadow-sm flex items-center"
-              onClick={toggleDropdown}
+              onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <span className="mr-2">John Doe</span>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

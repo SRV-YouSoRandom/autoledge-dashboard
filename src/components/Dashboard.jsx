@@ -4,7 +4,6 @@ import DeployForm from './DeployForm';
 import ConfigStack from './ConfigStack';
 import EnvironmentSelector from './EnvironmentSelector';
 import Summary from './Summary';
-import Footer from './Footer';
 
 const Dashboard = () => {
   const [config, setConfig] = useState({
@@ -25,10 +24,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-blue-tint">
-      
-      <div className="flex-1 flex flex-col md:flex-row">
-        <div className="flex-1 p-4">
+    <div className="container mx-auto px-4 py-6">
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex-1">
           <div className="bg-white rounded-lg shadow-md mb-4">
             <DeployForm />
           </div>
@@ -40,12 +38,10 @@ const Dashboard = () => {
           </div>
         </div>
         
-        <div className="w-full md:w-96 p-4">
+        <div className="w-full md:w-96">
           <Summary config={config} environment={environment} />
         </div>
       </div>
-      
-      <Footer />
     </div>
   );
 };

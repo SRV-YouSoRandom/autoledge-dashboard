@@ -9,7 +9,6 @@ const RaaSPage = () => {
       <div className="flex-1">
         <Dashboard />
       </div>
-      
       <Footer />
     </div>
   );
