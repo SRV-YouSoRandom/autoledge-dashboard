@@ -21,6 +21,7 @@ const Sidebar = () => {
         
         <NavLink 
           to="/naas/deployment" 
+          end
           className={({ isActive }) => 
             `flex items-center p-2 rounded-md ${isActive ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-100'}`
           }

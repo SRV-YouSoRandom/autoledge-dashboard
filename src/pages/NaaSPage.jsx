@@ -22,9 +22,9 @@ const NaaSPage = () => {
         
         <div className="flex-1 bg-white rounded-lg shadow-md">
           <Routes>
-            <Route path="/console" element={<NodeConsole />} />
-            <Route path="/deployment" element={<NodeDeployment />} />
-            <Route path="/" element={<Navigate to="/naas/deployment" replace />} />
+            <Route path="console" element={<NodeConsole />} />
+            <Route path="deployment" element={<NodeDeployment />} />
+            <Route path="" element={<Navigate to="deployment" replace />} />
           </Routes>
         </div>
       </div>

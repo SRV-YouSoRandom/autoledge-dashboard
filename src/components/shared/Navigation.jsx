@@ -13,10 +13,13 @@ const Navigation = () => {
     <div className="bg-white shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
-            <h1 className="text-xl font-bold text-gray-800 mr-8">AutoLedge</h1>
-            
-            <div className="flex items-center space-x-6">
+          <div className="flex-1">
+            <h1 className="text-xl font-bold text-gray-800">AutoLedge</h1>
+          </div>
+          
+          {/* Centered navigation links */}
+          <div className="flex items-center justify-center flex-1">
+            <div className="flex items-center space-x-8">
               <NavLink 
                 to="/home" 
                 className={({ isActive }) => 
@@ -44,7 +47,7 @@ const Navigation = () => {
             </div>
           </div>
           
-          <div className="flex items-center relative">
+          <div className="flex items-center relative flex-1 justify-end">
             <button 
               className="px-4 py-2 bg-white border border-gray-300 rounded shadow-sm flex items-center"
               onClick={toggleDropdown}
