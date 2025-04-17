@@ -1,10 +1,9 @@
+// src/pages/NaaSPage.jsx
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Header from '../components/Header';
 import Sidebar from '../components/naas/Sidebar';
 import NodeDeployment from '../components/naas/NodeDeployment';
 import Footer from '../components/Footer';
-import Navigation from '../components/shared/Navigation';
 
 const NodeConsole = () => (
   <div className="p-4">
@@ -16,13 +15,7 @@ const NodeConsole = () => (
 const NaaSPage = () => {
   return (
     <div className="min-h-screen flex flex-col bg-blue-tint">
-      <Header />
-      
-      <div className="container mx-auto px-4 mt-4">
-        <Navigation />
-      </div>
-      
-      <div className="flex-1 container mx-auto px-4 flex flex-col md:flex-row gap-4">
+      <div className="flex-1 container mx-auto px-4 flex flex-col md:flex-row gap-4 py-6">
         <div className="md:w-64 flex-shrink-0">
           <Sidebar />
         </div>
