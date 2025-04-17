@@ -35,6 +35,7 @@ const Navigation = () => {
                 className={({ isActive }) => 
                   `text-lg font-semibold ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`
                 }
+                end
               >
                 RaaS
               </NavLink>

@@ -9,7 +9,7 @@ const Dashboard = () => {
   const [config, setConfig] = useState({
     framework: 'Optimism Bedrock',
     settlement: 'Base Sepolia',
-    dataAvailability: 'Ethereum Blobs',
+    dataAvailability: 'Avail DA',
     nativeToken: 'Ethereum'
   });
   
