@@ -16,7 +16,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex-1">
-            <h1 className="text-xl font-bold text-gray-800">AutoLedge</h1>
+            <h1 className="text-xl font-bold text-gray-800">Verinet</h1>
           </div>
           
           {/* Centered navigation links */}
@@ -37,7 +37,7 @@ const Navigation = () => {
                 }
                 end
               >
-                RaaS
+                New Company
               </NavLink>
               <NavLink 
                 to="/naas" 
@@ -45,7 +45,7 @@ const Navigation = () => {
                   `text-lg font-semibold ${isActive ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`
                 }
               >
-                NaaS
+                Dashboard
               </NavLink>
             </div>
           </div>
